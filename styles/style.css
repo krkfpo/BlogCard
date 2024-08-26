@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-background-color: #f4d04e;
+  --secondary-background-color: #fff;
+  --primary-text-color: #111111;
+  --secondary-text-color: #6b6b6b;
+  --spacing-200: 1em;
+  --spacing-150: 0.75em;
+  --spacing-100: 0.5em;
+  --spacing-50: 0.25em;
+  --preset-3: 0.9rem;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  margin: 1.3em;
+  background-color: var(--primary-background-color);
+  line-height: 1.5;
+  /* Center the card horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.blogCard {
+  background-color: var(--secondary-background-color);
+  max-width: 23rem;
+  max-height: 35rem;
+  min-height: 31rem;
+  border-radius: 20px;
+  /*Used a common spacing instead of spacing individual items */
+  padding: 1.5em;
+  border: 1px solid var(--primary-text-color);
+  box-shadow: 8px 8px var(--primary-text-color);
+}
+
+/* ==============  Image inside the blog card =================*/
+.blogCard--image {
+  max-width: 21rem;
+  max-height: 12rem;
+  /* to seperate image and text */
+  margin-bottom: 1.5em;
+}
+
+.blogCard--image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+/* =======================  BlogCard Tags ========================*/
+
+.tags {
+  margin-bottom: var(--spacing-150);
+  font-size: var(--preset-3);
+}
+
+.tags p {
+  margin-top: var(--spacing-150);
+}
+
+/* =======================  Learning Button ========================*/
+.btn {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+  padding: var(--spacing-50) var(--spacing-150);
+  border-radius: 4px;
+  font-weight: 900;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--secondary-background-color);
+  color: var(--primary-background-color);
+}
+
+/* ======================= Blogcard Title and Summary ========================*/
+.blogCard--topic a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.blogCard--topic a:hover,
+.blogCard--topic a:focus {
+  color: var(--primary-background-color);
+}
+
+.blogCard--topic p {
+  color: var(--secondary-text-color);
+}
+
+/* ======================= Author Details ========================*/
+.blogCard--authorProfile {
+  display: flex;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  align-items: center;
+  font-weight: 900;
+  font-size: var(--preset-3);
+  /* to seperate text  and author profile*/
+  margin-top: 1.5em;
+}
+
+.blogCard--authorProfile:focus,
+.blogCard--authorProfile:hover {
+  color: var(--primary-background-color);
+}
+/* seperating author logo and author name */
+.author--avatar {
+  padding-right: var(--spacing-150);
+}
+/* giving height and width dimensions of the author icon*/
+.author--avatar img {
+  width: 2em;
+  height: 2em;
+}
